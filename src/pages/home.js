@@ -12,7 +12,7 @@
                         />
                         <div>
                             <span className="post-author">Dhitosh</span>
-                            <span className="post-author">a minute ago</span>
+                            <span className="post-author"> a minute ago</span>
 
 
                         </div>
