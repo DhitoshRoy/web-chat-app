@@ -1,7 +1,6 @@
-
-
 import { useEffect } from "react";
 import{getPosts} from "../api/index";
+import {Home} from "../pages";
 
 function App() {
 
@@ -10,24 +9,15 @@ function App() {
 
       const response = await getPosts();
       console.log('response', response);
-
     }
 
     fetchPosts();
 
-
-
   },[]);
 
   return (
-    <div className="App">
-
-
-    
-
-      <h1>Hello dear !</h1>
-      <h2>This is react app</h2>
-      
+    <div className="App">n
+    <Home/> 
     </div>
   );
 }

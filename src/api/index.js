@@ -4,9 +4,6 @@ import { API_URLS,LOCALSTORAGE_TOKEN_KEY } from "../utiles";
 const customFetch = async(url, {body,...customconfig}) =>{
     const token = window.localStorage.getItem(LOCALSTORAGE_TOKEN_KEY);
 
-
-    
-
     const headers = {
 
         'content-type' : 'application/json',
@@ -17,9 +14,6 @@ const customFetch = async(url, {body,...customconfig}) =>{
 
         headers.Authorization = `Bearer ${token}`;
     };
-
-
-
     const config = {
 
         ...customconfig, 
@@ -39,7 +33,7 @@ const customFetch = async(url, {body,...customconfig}) =>{
         const response = await fetch(url, config);
         const data = await response.json ();
 
-        if (response.success){
+        if (data.success){
 
             return{
 
@@ -57,12 +51,8 @@ const customFetch = async(url, {body,...customconfig}) =>{
 
             message:err.message,
             success:false
-
         }           
     }
-    
-
-
 };
 
 
