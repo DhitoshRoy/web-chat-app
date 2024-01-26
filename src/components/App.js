@@ -16,7 +16,7 @@ function App() {
   },[]);
 
   return (
-    <div className="App">n
+    <div className="App">
     <Home/> 
     </div>
   );
