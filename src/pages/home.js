@@ -6,6 +6,9 @@
     return (
 
         <div className={styles.postList}>
+            {/* {posts.map(post=>
+                
+                )} */}
             <div className={styles.postwrapper}>
                 <div className={styles.postHeader}>
                     <div className={styles.postAvatar}>
