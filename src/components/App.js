@@ -1,12 +1,12 @@
 import { useEffect , useState} from "react";
 import{getPosts} from "../api/index";
 import {Home} from "../pages";
-import {Loader} from "./";
+import Loader from "./Loader";
 
 function App() {
 
-  const [posts, setPosts] =useState([]);
-  const [Loading, setLoading] =useState(true);
+  const [posts, setPosts] = useState([]);
+  const [Loading, setLoading] = useState(true);
 
   useEffect(()=>{
     const fetchPosts = async()=>{
@@ -33,6 +33,9 @@ function App() {
   return (
     <div className="App">
     <Home posts={posts}/> 
+{/* 
+    <h1>Hello!</h1> */}
+  
     </div>
   );
 }
