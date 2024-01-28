@@ -1,4 +1,4 @@
- 
+ import PropTypes from 'prop-types';
  import styles from '../styles/home.module.css';
  
  const Home = ({posts}) =>{
@@ -6,8 +6,8 @@
     return (
         <div className={styles.postList}>
             {posts.map((post) => (
-            <div className={styles.postwrapper}>
-            <div className={styles.postHeader}>
+            <div className={styles.postwrapper} key ={`post-${post._id}`}>
+            <div className={styles.postHeader}> 
                 <div className={styles.postAvatar}>
                     <img
                     src="https://t3.ftcdn.net/jpg/03/46/83/96/240_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
@@ -60,5 +60,10 @@
     );
 
 };
+
+Home.propTypes = {
+
+    posts : PropTypes.array.isRequired,
+}
 
 export default Home;
