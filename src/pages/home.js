@@ -1,10 +1,12 @@
  import PropTypes from 'prop-types';
  import styles from '../styles/home.module.css';
+ import Navbar from './navbar';
  
  const Home = ({posts}) =>{
 
     return (
         <div className={styles.postList}>
+            <Navbar/>
             {posts.map((post) => (
             <div className={styles.postwrapper} key ={`post-${post._id}`}>
             <div className={styles.postHeader}> 

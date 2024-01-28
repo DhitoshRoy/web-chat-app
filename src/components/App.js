@@ -2,6 +2,7 @@ import { useEffect , useState} from "react";
 import{getPosts} from "../api/index";
 import {Home} from "../pages";
 import Loader from "./Loader";
+import Navbar from "../pages/navbar";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className="App">
     <Home posts={posts}/> 
+    <Navbar/>
 {/* 
     <h1>Hello!</h1> */}
   
